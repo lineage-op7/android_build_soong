@@ -116,6 +116,9 @@ type variableProperties struct {
 			Static_libs  []string
 			Srcs         []string
 		}
+		Healthd_enable_op_fastchg struct {
+			Cflags []string
+		}
 
 		// include Lineage variables
 		Lineage android.Product_variables
@@ -235,6 +238,8 @@ type productVariables struct {
 	PgoAdditionalProfileDirs []string `json:",omitempty"`
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
+
+	Healthd_enable_op_fastchg  *bool `json:",omitempty"`
 
 	// include Lineage variables
 	Lineage android.ProductVariables
